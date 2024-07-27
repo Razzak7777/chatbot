@@ -65,10 +65,10 @@ document.getElementById('send-button').addEventListener('click', () => {
 // Event listener for toggling the chat interface
 document.querySelector('.chatbot-toggler').addEventListener('click', () => {
     const chatbot = document.querySelector('.chatbot');
-    chatbot.style.display = chatbot.style.display === 'none' ? 'flex' : 'none';
+    chatbot.classList.toggle('show'); // Toggle chatbox visibility
 });
 
 // Event listener for closing the chat interface
 document.querySelector('.close-btn').addEventListener('click', () => {
-    document.querySelector('.chatbot').style.display = 'none';
+    document.querySelector('.chatbot').classList.remove('show'); // Hide chatbox
 });
