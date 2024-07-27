@@ -1,0 +1,159 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+h1 {
+    margin: 0;
+}
+
+.chat-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.close-btn, .chatbot-toggler {
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #e0e0e0;
+}
+
+.chatbox {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chat.outgoing {
+    justify-content: flex-end;
+}
+
+.chat.incoming {
+    justify-content: flex-start;
+}
+
+.chat .material-symbols-outlined {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.chat p {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+.chat.error p {
+    background-color: #ff4c4c; /* Error color */
+}
+
+.chat-input {
+    padding: 10px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #444;
+}
+
+textarea {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 10px;
+    resize: none;
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Style for the chat toggle button and image */
+.chatbot-toggler {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}

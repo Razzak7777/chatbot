@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Main Website </h1>
+    </header>
+    <main>
+        <section class="chat-container">
+            <!-- Use an image for the chat toggle button -->
+            <button class="chatbot-toggler" aria-label="Toggle chat">
+                <img src="chat-icon.png" alt="Chat Icon" class="chat-icon">
+            </button>
+            <div class="chatbot" aria-live="polite">
+                <header>
+                    <h2>Lords AI ChatBot 🐍</h2>
+                    <button class="close-btn material-symbols-outlined" aria-label="Close chat">close</button>
+                </header>
+                <ul class="chatbox" role="list"></ul>
+                <div class="chat-input">
+                    <textarea id="chat-message" placeholder="Type your message here..." aria-label="Message input"></textarea>
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" defer></script> <!-- Link to JavaScript file -->
+</body>
+</html>
