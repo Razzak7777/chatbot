@@ -1,7 +1,13 @@
 /* style.css */
 
+/* Apply San Francisco font */
+@font-face {
+    font-family: 'San Francisco';
+    src: local('San Francisco'), url('https://fonts.googleapis.com/css2?family=San+Francisco:wght@400;600&display=swap');
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'San Francisco', sans-serif; /* Use the Apple San Francisco font */
     background-color: #121212;
     color: #e0e0e0;
     margin: 0;
@@ -38,6 +44,12 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: absolute;
+    bottom: 70px; /* Adjusted to open near the icon */
+    right: 20px;  /* Adjusted to open near the icon */
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    display: none; /* Hide initially */
 }
 
 header {
@@ -156,4 +168,10 @@ button:focus {
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* Show chatbox on toggling */
+.chatbot.show {
+    display: flex; /* Show chatbox */
+    transform: translateY(0); /* Slide up */
 }
